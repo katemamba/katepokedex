@@ -1,0 +1,22 @@
+/*
+ * Author:        Pierre-Henry Soria <ph7software@gmail.com>
+ * Copyright:     (c) 2012-2015, Pierre-Henry Soria. All Rights Reserved.
+ * License:       GNU General Public License; See PH7.LICENSE.txt and PH7.COPYRIGHT.txt in the root directory.
+ */
+
+#cache_chart {
+    height:400px;
+    width:600px;
+}
+
+#free_space_chart {
+    height:420px;
+    width:620px;
+}
+
+#user_chart {
+    height: 300px;
+    width: 100%;
+}
+
+table, td, th{border:1px solid gray}

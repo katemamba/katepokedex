@@ -1,0 +1,103 @@
+/* 1210px or more */
+@media (min-width: 1210px)
+{
+  .login_block{margin:-10px 0 0 48%}
+}
+/* 1209px or less */
+@media (max-width: 1209px)
+{
+    .bt_login_forgot{display:none}
+}
+
+/* 1230px or more */
+@media (min-width: 1230px)
+{
+    .window {height:300px;width:590px}
+    .profiles_window{margin:2px;max-height:346px;max-width:590px}
+    .img_reel img{float:left;height:300px;width:590px}
+}
+
+/* 1230px or less */
+@media (max-width: 1230px)
+{
+    .window {height:200px;width:393px}
+    .profiles_window{margin:2px;max-height:230px;max-width:393px}
+    .img_reel img{float:left;height:200px;width:393px}
+}
+
+
+#logo{float:left}
+
+.folio_block {
+    position: absolute;
+}
+.carousel {
+    margin-top:30px;
+}
+
+/*--Main Container--*/
+.splash_slideshow {
+    float: left;
+    margin-top:22px;
+}
+/*--Window/Masking Styles--*/
+.window, .profiles_window {
+    border:1px solid #999;
+    border-radius: 5px;
+    overflow: hidden; /*--Hides anything outside of the set width/height--*/
+    position: relative;
+}
+h1:hover{color:#1877D5;cursor:default}
+
+.img_reel {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*--Paging Styles--*/
+.paging {
+    position: absolute;
+    bottom: 30px; right: -7px;
+    width: 178px; height:47px;
+    z-index: 100; /*--Assures the paging stays on the top layer--*/
+    text-align: center;
+    line-height: 40px;
+    background: url(../img/paging_bg2.png) no-repeat;
+    display: none; /*--Hidden by default, will be later shown with jQuery--*/
+}
+.paging a {
+    padding: 5px;
+    text-decoration: none;
+    color: #fff;
+}
+.paging a.active {
+    font-weight: bold;
+    background: #920000;
+    border: 1px solid #610000;
+    -border-radius: 4px;
+}
+.paging a:hover{font-weight: bold;}
+.block_txt{margin:380px 80px 5px 10px}
+.counter{margin:15px 2px 4px 1px}
+
+/** Buttons (links) **/
+.bt_login_remember,.bt_login_forgot{padding-bottom:4%}
+.bt_login_remember{float:left;padding-left:5.5%;margin-top:-1.5%}
+.bt_login_forgot{float:right;padding-right:40%;margin-top:-2px}
+
+
+video#bgvid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url('../img/splash_vid.jpg') no-repeat;
+  background-size: cover;
+}

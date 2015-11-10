@@ -1,0 +1,13 @@
+Options -MultiViews -Indexes
+Options +FollowSymLinks
+
+ErrorDocument 404 /no/__404err_this_is_not_found
+
+RewriteEngine On
+
+# e.g. http://my-site.com/en/
+RewriteRule ^([a-z]{2})/?$ index.php?l=$1 [L]
+
+# e.g. http://my-site.com/my-page/en/
+RewriteRule ^([a-z]{2})/([^/]+)/?$ index.php?p=$2&l=$1 [L]
+
