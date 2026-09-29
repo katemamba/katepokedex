@@ -1,0 +1,160 @@
+.battle-arena {
+  display: grid;
+  gap: 1rem;
+}
+
+.battle-stage {
+  position: relative;
+  display: grid;
+  gap: 1.25rem;
+  background:
+    radial-gradient(ellipse at 70% 20%, rgba(214, 40, 40, 0.12), transparent 45%),
+    radial-gradient(ellipse at 20% 80%, rgba(42, 157, 143, 0.16), transparent 50%),
+    linear-gradient(180deg, #eef6fb, #f4efe4);
+  overflow: hidden;
+}
+
+.battle-fighter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.battle-fighter--enemy {
+  justify-content: flex-end;
+}
+
+.battle-fighter img {
+  width: min(160px, 36vw);
+  height: min(160px, 36vw);
+  object-fit: contain;
+  filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.18));
+  animation: float-y 3.2s ease-in-out infinite;
+}
+
+.battle-fighter--player img {
+  animation-delay: 0.4s;
+}
+
+.battle-fighter__meta {
+  min-width: min(220px, 55vw);
+  padding: 0.75rem 0.9rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(26, 35, 50, 0.08);
+}
+
+.battle-lv {
+  font-size: 0.85rem;
+  color: #5b6b7c;
+  font-weight: 700;
+}
+
+.hp-bar {
+  display: grid;
+  gap: 0.25rem;
+  margin: 0.45rem 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #3d4d5f;
+}
+
+.hp-bar__track {
+  height: 0.55rem;
+  border-radius: 999px;
+  background: rgba(26, 35, 50, 0.1);
+  overflow: hidden;
+}
+
+.hp-bar__fill {
+  height: 100%;
+  border-radius: inherit;
+  transition: width 0.35s ease;
+}
+
+.hp-bar__fill--ok {
+  background: #2a9d8f;
+}
+
+.hp-bar__fill--mid {
+  background: #e9c46a;
+}
+
+.hp-bar__fill--low {
+  background: #d62828;
+}
+
+.battle-turn,
+.battle-opponent-tag {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #5b6b7c;
+}
+
+.battle-log {
+  max-height: 160px;
+  overflow: auto;
+  font-size: 0.92rem;
+}
+
+.battle-log p {
+  margin: 0.2rem 0;
+}
+
+.battle-commands,
+.battle-moves,
+.battle-bag,
+.battle-switch {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.move-btn,
+.bag-btn {
+  display: grid;
+  gap: 0.2rem;
+  text-align: left;
+  border: 1px solid rgba(26, 35, 50, 0.1);
+  border-radius: 0.9rem;
+  padding: 0.7rem 0.8rem;
+  background: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  font: inherit;
+}
+
+.move-btn:hover,
+.bag-btn:hover {
+  border-color: rgba(42, 157, 143, 0.45);
+}
+
+.move-btn:disabled,
+.bag-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.move-btn small,
+.bag-btn small {
+  color: #5b6b7c;
+}
+
+@media (max-width: 640px) {
+  .battle-fighter--enemy,
+  .battle-fighter--player {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .battle-fighter--enemy {
+    align-items: flex-end;
+  }
+
+  .battle-commands,
+  .battle-moves,
+  .battle-bag,
+  .battle-switch {
+    grid-template-columns: 1fr;
+  }
+}

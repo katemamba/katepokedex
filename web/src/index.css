@@ -1,0 +1,47 @@
+:root {
+  --ink: #1a2332;
+  --brand: #d62828;
+  --accent: #2a9d8f;
+  --gold: #e9c46a;
+  --font-display: 'Syne', system-ui, sans-serif;
+  --font-body: 'Figtree', system-ui, sans-serif;
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.45;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #eef6f4;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}

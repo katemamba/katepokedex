@@ -1,0 +1,40 @@
+.stat-bar {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.stat-bar__meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #3d4d5f;
+}
+
+.stat-bar__track {
+  height: 0.55rem;
+  border-radius: 999px;
+  background: rgba(26, 35, 50, 0.08);
+  overflow: hidden;
+}
+
+.stat-bar__fill {
+  height: 100%;
+  border-radius: inherit;
+  transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.stat-bar__fill--low {
+  background: #e76f51;
+}
+
+.stat-bar__fill--ok {
+  background: #e9c46a;
+}
+
+.stat-bar__fill--mid {
+  background: #2a9d8f;
+}
+
+.stat-bar__fill--high {
+  background: #264653;
+}
